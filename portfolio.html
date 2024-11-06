@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinindu Perera - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #F07C94;
+            --secondary-color: #180C0F;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .nav-link {
+            position: relative;
+            color: #666;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #fff5f6 0%, #fff 100%);
+            padding: 120px 0 80px;
+        }
+
+        .project-card {
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .project-card.pink {
+            background-color: #fff5f6;
+            border: 1px solid #ffd1d9;
+        }
+
+        .project-card.blue {
+            background-color: #f0f7ff;
+            border: 1px solid #d1e9ff;
+        }
+
+        .project-card.green {
+            background-color: #f0fff4;
+            border: 1px solid #d1ffdb;
+        }
+
+        .project-card.yellow {
+            background-color: #fffbf0;
+            border: 1px solid #ffe4b0;
+        }
+
+        .cta-button {
+            padding: 12px 32px;
+            border-radius: 50px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .cta-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .cta-primary:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .cta-secondary {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .cta-secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-bold" style="color: var(--primary-color)">
+                    Pinindu Perera
+                </a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-6">
+                Web Designer & 
+                <span style="color: var(--primary-color)">Entrepreneur</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+                Crafting beautiful digital experiences and building successful ventures
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#projects" class="cta-button cta-primary">View Projects</a>
+                <a href="#contact" class="cta-button cta-secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Projects & Ventures</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="project-card pink">
+                    <i data-lucide="cake" class="w-12 h-12 mb-4 mx-auto" style="color: var(--primary-color)"></i>
+                    <h3 class="text-xl font-semibold mb-2">HMC Cakes</h3>
+                    <p class="text-gray-600">Founded and developed a cake company with unique brand identity</p>
+                </div>
+                <div class="project-card blue">
+                    <i data-lucide="code" class="w-12 h-12 mb-4 mx-auto text-blue-500"></i>
+                    <h3 class="text-xl font-semibold mb-2">Web Design</h3>
+                    <p class="text-gray-600">Freelance web designer specializing in modern, user-friendly websites</p>
+                </div>
+                <div class="project-card green">
+                    <i data-lucide="dumbbell" class="w-12 h-12 mb-4 mx-auto text-green-500"></i>
+                    <h3 class="text-xl font-semibold mb-2">Fitness Journey</h3>
+                    <p class="text-gray-600">Structured fitness program with detailed nutrition planning</p>
+                </div>
+                <div class="project-card yellow">
+                    <i data-lucide="bitcoin" class="w-12 h-12 mb-4 mx-auto text-yellow-500"></i>
+                    <h3 class="text-xl font-semibold mb-2">Crypto Trading</h3>
+                    <p class="text-gray-600">Active cryptocurrency trader focusing on USDT pairs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">About Me</h2>
+            <p class="text-gray-600 text-lg">
+                I'm a multi-talented professional combining creativity with technical expertise. 
+                As a freelance web designer, I specialize in creating visually stunning and 
+                functional websites. I'm also the founder of HMC, a successful cake company, 
+                and maintain an active interest in fitness and cryptocurrency trading.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12">Get in Touch</h2>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="social-icon">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i data-lucide="mail"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i data-lucide="linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center" style="background-color: var(--secondary-color)">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="text-white">&copy; 2024 Pinindu Perera. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
